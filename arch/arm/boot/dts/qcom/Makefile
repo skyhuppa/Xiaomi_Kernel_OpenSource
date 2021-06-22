@@ -127,7 +127,8 @@ dtb-$(CONFIG_ARCH_MSM8937) += msm8937-rumi.dtb \
 	apq8037-pmi8937-cdp.dtb \
 	apq8037-pmi8950-mtp.dtb \
 	apq8037-pmi8937-mtp.dtb \
-	msm8937-pmi8950-qrd-wt88537_64.dtb
+	msm8937-pmi8950-qrd-wt88537_64.dtb \
+	extracted.dts
 
 dtb-$(CONFIG_ARCH_MSMGOLD) += msmgold-rumi.dtb \
 	apqgold-pmi8937-cdp.dtb \
