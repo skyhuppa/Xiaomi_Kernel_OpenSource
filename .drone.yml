@@ -9,6 +9,7 @@ steps:
   host: ci.example.io
   username: secret
   password: secret
+  port: 22
   script:
         - export DRONE_SERVER=https://ci.example.io
         - export DRONE_TOKEN=secret
