@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "Checkout kernel source"
-      uses: actions/checkout@v2
+      user: actions/checkout@v2
 
     - name: "Pre-build message to Telegram"
       uses: appleboy/telegram-action@master
