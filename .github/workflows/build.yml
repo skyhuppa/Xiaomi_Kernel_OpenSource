@@ -21,7 +21,7 @@ jobs:
         message: Building kernel. https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
     - name: "Android kernel build"
-      uses: lemniskett/android-kernel-actions@master
+      uses: skyhuppa/android-kernel-actions@master
       id: build
       with:
         arch: arm64
