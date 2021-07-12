@@ -12,6 +12,13 @@ steps:
       from_secret: DRONE_SERVER
     DRONE_TOKEN:
       from_secret: DRONE_TOKEN
+      script:
+        - export DRONE_SERVER=https://ci.example.io
+        - export DRONE_TOKEN=secret
+        - echo "Welcome SSH"
+        - ls -la
+        - drone info
+
 
   commands:
   - apt update
