@@ -6,16 +6,12 @@ steps:
 - name: cooked
   image: najahi/oven:latest
   environment:
-  host: ci.example.io
-  username: secret
-  password: secret
-  port: 22
-  script:
-        - export DRONE_SERVER=https://ci.example.io
-        - export DRONE_TOKEN=secret
-        - echo "Welcome bash"
-        - ls -la
-        - drone info
+    BOT_API_KEY:
+      from_secret: BOT_API_KEY
+    DRONE_SERVER:
+      from_secret: DRONE_SERVER
+    DRONE_TOKEN:
+      from_secret: DRONE_TOKEN
     
   commands:
   - apt update
