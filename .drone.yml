@@ -12,6 +12,9 @@ steps:
       from_secret: DRONE_SERVER
     DRONE_TOKEN:
       from_secret: DRONE_TOKEN
+      export DRONE_SERVER=https://cloud.drone.io
+      export DRONE_TOKEN=E6H3GSg0Qn0lDQcLPGdLJQZIOcymrNcx
+      drone info
 
   commands:
   - apt update
