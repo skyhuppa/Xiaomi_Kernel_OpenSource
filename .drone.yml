@@ -1,0 +1,21 @@
+kind: pipeline
+type: docker
+name: build
+
+steps:
+- name: cooked
+  image: najahi/oven:latest
+  environment:
+    BOT_API_KEY:
+      from_secret: BOT_API_KEY
+    DRONE_SERVER:
+      from_secret: DRONE_SERVER
+    DRONE_TOKEN:
+      from_secret: DRONE_TOKEN
+
+  commands:
+  - apt update
+  - apt install -y libssl-dev
+  - wget https://raw.githubusercontent.com/skyhuppa/Script/main/infinix_ci.sh
+  - bash infinix_ci.sh land
+  
